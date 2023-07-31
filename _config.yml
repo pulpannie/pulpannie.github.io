@@ -20,7 +20,7 @@ timezone: Asia/Shanghai
 
 title: Annie's blog # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the sub-title
+tagline: Computer Science with a focus on Privacy # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   BS CompSci/Media&Comm (2017~2021), MS Computer Engineering (2022~).
