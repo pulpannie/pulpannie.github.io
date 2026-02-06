@@ -13,7 +13,7 @@ And, as any learner should, I'm explaining what I've learned by reading this mat
 ---
 
 # Physical I/O
-Before understanding virtual I/O, it's imperative to understand how physical I/O works for a non-virtualized OS. Please refer to my [PCIe blog post](./2026-02-03-PCIe.md) for basic introduction to PCIe.
+Before understanding virtual I/O, it's imperative to understand how physical I/O works for a non-virtualized OS. Please refer to my [PCIe blog post](https://pulpannie.github.io/posts/PCIe/) for basic introduction to PCIe.
 
 ## Discovering I/O Devices
 Upon booting, the OS must figure out which devices are connected to the motherboard. The UEFI (firmware on the mainboard) provides a description of the available devices to the OS. It does so in some standard format, such as the Advanced Configuration and Power Interface (ACPI) format. 
