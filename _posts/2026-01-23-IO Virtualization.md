@@ -8,12 +8,12 @@ tags: [virtualization, OS]
 
 I've been struggling to find good materials online about the basics of I/O virtualization.
 But I came across the book, "Hardware and Software Support for Virtualization", and its covered everything I was ever confused about I/O virtualization.
-And, as any learner should, I'm explaining what I've learned by reading this material so that I can truly absorb it as my own. 
+And, as any learner should, I'm explaining what I've learned by reading this material so that I can truly absorb it as my own. Most of the information presented in this post is from the book.
 
 ---
 
 # Physical I/O
-Before understanding virtual I/O, it's imperative to understand how physical I/O works for a non-virtualized OS.
+Before understanding virtual I/O, it's imperative to understand how physical I/O works for a non-virtualized OS. Please refer to my [PCIe blog post](./2026-02-03-PCIe.md) for basic introduction to PCIe.
 
 ## Discovering I/O Devices
 Upon booting, the OS must figure out which devices are connected to the motherboard. The UEFI (firmware on the mainboard) provides a description of the available devices to the OS. It does so in some standard format, such as the Advanced Configuration and Power Interface (ACPI) format. 
@@ -48,7 +48,7 @@ In summary, the only type of OS/device interaction are the three listed above -
 
 **device to OS:** 2. reading to and writing from memory via DMA, 3. raising interrupts. 
 
-## I/O Virtualization
+# I/O Virtualization
 For virtual machines to share I/O devices, the hypervisor must itervene. The hypervisor needs to provide the illusion that the guests are directly accessing the real devices, while acting as an intermediary such that it acts on behalf of the guests to actually access the real device. The hypervisor does this by trapping all the guest's I/O-related operations and emulating them.
 
 ### I/O emulation (Full Virtualization)
